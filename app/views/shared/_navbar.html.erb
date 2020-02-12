@@ -6,7 +6,7 @@
       </div>
 
       <div class="flex-grow">
-        <%= text_field_tag nil, nil, autofocus: true, placeholder: "Search gifs", class: "form-control", data: { controller: "search", action: "keypress@window->search#focus", target: "search.field" } %>
+        <%= text_field_tag nil, nil, autofocus: true, placeholder: "Search gifs (Press / to focus)", class: "form-control", data: { controller: "search", action: "keypress@window->search#focus", target: "search.field" } %>
       </div>
 
       <div class="px-6">
