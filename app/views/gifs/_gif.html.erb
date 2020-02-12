@@ -1,0 +1,7 @@
+<div class="w-64 m-2 border rounded shadow flex flex-col justify-between">
+  <%= link_to image_tag(gif.image_url, class: "mx-auto"), gif, class: "block bg-black" %>
+  <div class="p-2 text-center text-sm">
+    <%= linked_tag_list gif %>
+    <div class="p-2 text-xs text-gray-700">Uploaded by <%= link_to gif.user.name, gif.user %></div>
+  </div>
+</div>

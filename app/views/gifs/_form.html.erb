@@ -1,0 +1,39 @@
+<%= form_with(model: gif, local: true) do |form| %>
+  <% if gif.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gif.errors.count, "error") %> prohibited this gif from being saved:</h2>
+
+      <ul>
+        <% gif.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <% if form.object.persisted? %>
+      <%= image_tag form.object.image_url, class: "mx-auto" %>
+    <% else %>
+      <%= form.hidden_field :image, value: form.object.cached_image_data %>
+      <%= form.text_field :image_remote_url, placeholder: "URL to gif", class: "form-control" %>
+
+      <%= form.label :image, "or upload a gif" %>
+      <%= form.file_field :image, class: "form-control" %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag_list, "Tag list (comma separated)" %>
+    <%= form.text_field :tag_list, value: form.object.tag_list.join(", "), class: "form-control" %>
+  </div>
+
+  <div class="actions flex justify-between items-center">
+    <div>
+      <%= form.submit class: "btn btn-purple" %>
+      <%= link_to 'Cancel', (@gif.persisted? ? @gif : root_path), class: "ml-2" %>
+    </div>
+
+    <%= link_to 'Destroy', @gif, method: :delete, data: { confirm: 'Are you sure?' } if @gif.persisted? %>
+  </div>
+<% end %>

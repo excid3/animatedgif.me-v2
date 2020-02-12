@@ -1,0 +1,61 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+a {
+  @apply text-blue-500;
+
+  &:hover {
+    @apply underline;
+  }
+}
+
+.form-control {
+  @apply bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight;
+
+  &:focus {
+    @apply outline-none bg-white border-purple-500;
+  }
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+
+.btn-purple {
+  @apply bg-purple-500 text-white;
+
+  &:hover {
+    @apply bg-purple-400;
+  }
+
+  &:focus {
+    @apply shadow-outline outline-none;
+  }
+}
+
+.btn-group {
+  .form-control, .btn {
+    @apply rounded-none;
+  }
+
+  :first-child {
+    @apply rounded-l;
+  }
+
+  :last-child {
+    @apply rounded-r;
+  }
+}
+
+.field {
+  @apply mb-4;
+}
+
+.nav-link {
+  @apply text-gray-800 font-bold ml-4 text-sm;
+
+  &.btn-purple {
+    @apply text-white;
+  }
+}
