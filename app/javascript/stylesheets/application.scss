@@ -59,3 +59,38 @@ a {
     @apply text-white;
   }
 }
+
+.pagination {
+  @apply inline-flex flex-wrap items-center justify-start;
+
+  .page {
+    &:first-child a, &:first-child {
+      @apply rounded-tl rounded-bl;
+    }
+
+    &:last-child a, &:last-child {
+      @apply rounded-tr rounded-br;
+    }
+  }
+
+  .disabled, .gap {
+    @apply border relative block leading-tight bg-white text-gray-500 no-underline py-2 px-3;
+    margin-left: -1px;
+  }
+
+  .page {
+    &.active {
+      @apply border border-purple-500 bg-purple-500 text-white relative block leading-tight no-underline py-2 px-3;
+      margin-left: -1px;
+    }
+
+    a {
+      @apply border relative block leading-tight bg-white text-purple-500 no-underline py-2 px-3;
+      margin-left: -1px;
+
+      &:hover {
+        @apply bg-gray-200;
+      }
+    }
+  }
+}
