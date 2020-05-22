@@ -234,7 +234,7 @@ DEPENDENCIES
   name_of_person (~> 1.1, >= 1.1.1)
   pagy (~> 3.7, >= 3.7.3)
   pg (>= 0.18, < 2.0)
-  puma (~> 4.1)
+  puma (~> 4.3)
   rails (~> 6.0.2, >= 6.0.2.1)
   sass-rails (>= 6)
   selenium-webdriver
