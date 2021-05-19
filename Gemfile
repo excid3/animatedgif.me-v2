@@ -56,5 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'acts-as-taggable-on', '~> 6.5'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'name_of_person', '~> 1.1', '>= 1.1.1'
-gem 'shrine', '~> 3.2', '>= 3.2.1'
+gem 'shrine', '~> 3.3'
 gem 'pagy', '~> 3.7', '>= 3.7.3'
